@@ -46,7 +46,7 @@ const Home = () => {
             
             <div className="upload__file">
               <label htmlFor="upload"> Select Excel File : &nbsp; </label>
-              <input name="upload" type="file" onChange = {FileHandler} />
+              <input name="upload" accept=".xlsx" type="file" onChange = {FileHandler} />
             </div>
           
             { data && <div className="table__container">
