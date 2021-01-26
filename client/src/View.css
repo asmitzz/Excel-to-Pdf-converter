@@ -1,0 +1,26 @@
+.card__container{
+    display: flex;
+    padding: 1rem;
+}
+
+.back{
+   font-size: larger;
+   margin: 1rem;
+}
+
+.card{
+    height: 75px;
+    width: 200px;
+    background: #FFBA37;
+    border-radius: 10px;
+    margin: 2rem;
+    font-size: 3rem;
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}

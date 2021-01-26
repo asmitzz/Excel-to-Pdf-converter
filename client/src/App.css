@@ -1,0 +1,29 @@
+body{
+  padding:0;
+  margin:0;
+}
+
+.header{
+  background: #FFBA37;
+  display: flex;
+  justify-content:space-between;
+  padding:1rem;
+}
+
+.search{
+  cursor: pointer;
+  border: 1px solid #FFBA37;
+  color: #FFBA37;
+  background:#5300c6;
+  padding:0.2rem 0.5rem;
+  padding-bottom: 0.32rem;
+}
+
+.searchInput{
+  padding:0.2rem 0.5rem;
+}
+
+.view{
+  cursor: pointer;
+}
+

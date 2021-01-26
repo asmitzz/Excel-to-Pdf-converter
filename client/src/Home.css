@@ -1,0 +1,53 @@
+table,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding:0.3rem 0.5rem;
+  }
+  
+  .table__container{
+     display: flex;
+     flex-direction: column;
+     margin: 1rem auto;
+     width: 90%;
+     background: #FFBA37;
+     padding: 2rem;
+     color:#282250;
+  }
+  
+  .table__download__btn{
+     display: flex;
+     margin: 0.5rem;
+     justify-content: flex-end;
+  }
+  
+  .table__download__btn button{
+    cursor: pointer;
+  }
+  
+  .upload__file{
+     display: flex;
+     justify-content: center;
+     background:#5300c6;
+     padding: 1rem;
+     width:50%;
+     margin: 2% auto;
+     color: aliceblue;
+  }
+  
+  .table__save__btn{
+    background:#5300c6;
+    color: aliceblue;
+    padding:0.5rem 1rem;
+    width: 100px;
+    border:none;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .saved{
+    color:aliceblue;
+    background:teal;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
