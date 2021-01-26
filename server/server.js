@@ -1,15 +1,21 @@
 const express = require('express');
 const app = express();
-const port = 5000 || process.env.PORT;
+const port = 6000 || process.env.PORT;
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
 const connect =  mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'spreadsheet'
+    // host: 'localhost',
+    // user: 'root',
+    // password: '',
+    // database: 'spreadsheet'
+    host:'mysql80-afe9.euw2.cloud.ametnes.com',
+    user:'RLqkAzJFxq',
+    password:'tO89jaS2z9796moVAIh8',
+    port:3316,
+    database:'3422883383',
+    ssl:true
 });
 
 connect.connect( err => {
@@ -41,6 +47,10 @@ app.get('/get/excel',(req, res) => {
         res.send(result)
     }) 
 });
+
+app.get('/',(req, res) => {
+    res.send("server is running");
+})
 
 app.get('/get/excel/:id',(req, res) => {
     const read = `SELECT data FROM excel where excel.id = ${req.params.id}`;

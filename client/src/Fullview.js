@@ -11,7 +11,7 @@ const Fullview = () => {
     const url = new URLSearchParams(window.location.search);
 
     useEffect( () => {
-           Axios.get("http://localhost:5000/get/excel/"+url.get('id')).then( res => setData(JSON.parse(res.data[0].data)) )
+           Axios.get("http://localhost:6000/get/excel/"+url.get('id')).then( res => setData(JSON.parse(res.data[0].data)) )
     },[]);
  
     console.log(data);
