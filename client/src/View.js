@@ -13,7 +13,7 @@ const View = (props) => {
     const url = new URLSearchParams(window.location.search);
 
     useEffect( () => {
-           Axios.get("http://localhost:6000/get/excel").then( res => setData(res.data) )
+           Axios.get("https://exceltopdf.herokuapp.com/get/excel").then( res => setData(res.data) )
     },[]);
 
     return (

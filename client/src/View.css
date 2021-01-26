@@ -9,14 +9,13 @@
 }
 
 .card{
-    height: 75px;
-    width: 200px;
+    height: 65px;
     background: #FFBA37;
     border-radius: 10px;
     margin: 2rem;
     font-size: 3rem;
     display: flex;
-    padding-top: 1rem;
+    padding: 1rem;
     justify-content: center;
     cursor: pointer;
 }

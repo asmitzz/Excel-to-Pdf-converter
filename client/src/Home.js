@@ -11,7 +11,7 @@ const Home = () => {
 
   const saveHandler = () => {
       const name = prompt("Enter name of the excel");
-      Axios.post('http://localhost:6000/save/excel',{name:name ,excel:data});
+      Axios.post('https://exceltopdf.herokuapp.com/save/excel',{name:name ,excel:data});
       setData('');
       setSuccess(true);
       setTimeout( () => {
