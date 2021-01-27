@@ -14,7 +14,17 @@ const Fullview = () => {
            } )
    });
 
-   
+  const downloadHandler = () => {
+    const data = document.querySelector('.table');
+    var opt = {
+      margin: 1,
+      image:{type: 'jpeg',quality: 0.98},
+      html2canvas: { scale: 2},
+      jsPDF: { unit:'in',format: 'letter',orientation:'portrait'}
+    };
+
+    window.html2pdf().from(data).set(opt).save();
+}
 
     return (
         <React.Fragment>
@@ -24,7 +34,7 @@ const Fullview = () => {
           </header>
             <div className="table__container">
                  <div className="table__download__btn">
-                    <button><i className="fa fa-download"></i> &nbsp;Download PDF </button>
+                    <button onClick={downloadHandler}><i className="fa fa-download"></i> &nbsp;Download PDF </button>
                  </div>
                  <div className="table"></div>
              </div>

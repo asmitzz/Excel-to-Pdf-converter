@@ -23,6 +23,18 @@ const Home = () => {
       } , 2000 )
   };
 
+  const downloadHandler = () => {
+       const data = document.querySelector('.table');
+       var opt = {
+         margin: 1,
+         image:{type: 'jpeg',quality: 0.98},
+         html2canvas: { scale: 2},
+         jsPDF: { unit:'in',format: 'letter',orientation:'portrait'}
+       };
+
+       window.html2pdf().from(data).set(opt).save();
+  }
+
   const FileHandler = (e) => {
      const Reader = new FileReader();
 
@@ -56,7 +68,7 @@ const Home = () => {
           
               <div className="table__container" style={{ display:show ? 'block':'none' }}>
                  { show && <div className="table__download__btn">
-                    <button><i className="fa fa-download"></i> &nbsp;Download PDF </button>
+                    <button onClick={downloadHandler}><i className="fa fa-download"></i> &nbsp;Download PDF </button>
                  </div>}
                  <div className="table"></div>
                  { show && <button onClick={saveHandler} className="table__save__btn"> Save </button>}

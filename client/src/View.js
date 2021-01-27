@@ -31,6 +31,8 @@ const View = (props) => {
                            <li>{excel.name.toUpperCase()}</li> 
                         </Link> 
                     )
+                  }else{
+                    return ""
                   }
                 } 
                )}
