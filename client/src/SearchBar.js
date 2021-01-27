@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     const [input,setInput] = useState('');
-
+    const submitHandler = (e) => {
+        e.preventDefault();
+        props.history.replace("/view?name="+input.toLowerCase())
+    }
     return (
         <div>
-               <form>
+                <form onSubmit={submitHandler}>
                    <input placeholder="Search excel by name" className="searchInput" type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-                   <Link className="search" to={"/view?name="+input.toLowerCase()}><i className="fa fa-search"></i></Link>
+                   <button className="search" ><i className="fa fa-search"></i></button>
                  </form>
         </div>
     );
 }
 ;
-export default SearchBar;
+export default withRouter(SearchBar);

@@ -10,7 +10,6 @@ table,td,th{
      flex-direction: column;
      margin: 1rem auto;
      width: 90%;
-     background: #FFBA37;
      padding: 2rem;
      color:#282250;
   }

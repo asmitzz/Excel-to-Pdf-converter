@@ -23,16 +23,18 @@ const View = (props) => {
                <SearchBar/>
              <Link to="/view" className="view">View All ExcelSheets</Link>
           </header>
-           <div className="card__container">
+           <ol>
                { data && data.map( excel => {
                if( excel.name.toLowerCase().includes(url.get('name')) || url.get('name') === null ){
                 return (
-                      <Link to={"/fullview?id="+excel.id} className="card" key={uuidv4()}>{excel.name.toUpperCase()}</Link> 
+                        <Link to={"/fullview?id="+excel.id} key={uuidv4()}>
+                           <li>{excel.name.toUpperCase()}</li> 
+                        </Link> 
                     )
-               }
+                  }
                 } 
                )}
-           </div>
+           </ol>
         </div>
     )
 };
