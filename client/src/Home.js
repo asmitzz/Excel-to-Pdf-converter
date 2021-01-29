@@ -27,9 +27,9 @@ const Home = () => {
        const data = document.querySelector('.table');
        var opt = {
          margin: 1,
-         image:{type: 'jpeg',quality: 0.98},
+         image:{type: 'jpeg',quality: 0.9},
          html2canvas: { scale: 2},
-         jsPDF: { unit:'in',format: 'letter',orientation:'portrait'}
+         jsPDF: { unit:'in',format: 'a4',orientation:'landscape'}
        };
 
        window.html2pdf().from(data).set(opt).save();
