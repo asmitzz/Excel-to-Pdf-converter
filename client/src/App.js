@@ -8,7 +8,7 @@ import Fullview from './Fullview';
 
 
 const App = () => {
-  
+  document.addEventListener('contextmenu', event => event.preventDefault());
   return (
       <Router>
           <Switch>
