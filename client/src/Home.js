@@ -46,8 +46,8 @@ const Home = () => {
          let htmlFormat = window.XLSX.write(workbook,{sheet:workbook.SheetNames[0],type:"binary",bookType:"html"})
       
          document.querySelector('.table').innerHTML = htmlFormat;
-
-         setData(htmlFormat)
+  
+         setData(htmlFormat);
 
          setShow(true);
      }
